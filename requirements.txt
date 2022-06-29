@@ -1,0 +1,14 @@
+torch==1.6.0
+torchvision==0.7.0
+timm==0.5.4
+mmcv-full==1.3.0
+opencv-python
+matplotlib
+terminaltables
+tqdm
+scikit-image
+ipython
+attr
+wandb
+future
+tensorboard

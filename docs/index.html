@@ -1,0 +1,421 @@
+
+ 
+<style type="text/css">
+    body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight:300;
+        font-size:18px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+    }
+
+    h1 {
+        font-weight:300;
+        margin: 0.4em;
+    }
+
+    p {
+        margin: 0.2em;
+    }
+
+    .disclaimerbox {
+        background-color: #eee;
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+        padding: 20px;
+    }
+
+    video.header-vid {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    img.header-img {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    img.rounded {
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    a:link,a:visited
+    {
+        color: #1367a7;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #208799;
+    }
+
+    td.dl-link {
+        height: 160px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow:
+                0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                5px 5px 0 0px #fff, /* The second layer */
+                5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                10px 10px 0 0px #fff, /* The third layer */
+                10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+                15px 15px 0 0px #fff, /* The fourth layer */
+                15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+                20px 20px 0 0px #fff, /* The fifth layer */
+                20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+                25px 25px 0 0px #fff, /* The fifth layer */
+                25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+        margin-left: 10px;
+        margin-right: 45px;
+    }
+
+
+    .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow:
+                0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                5px 5px 0 0px #fff, /* The second layer */
+                5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                10px 10px 0 0px #fff, /* The third layer */
+                10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 30px;
+        margin-bottom: 5px;
+    }
+
+    .vert-cent {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    hr
+    {
+        margin: 0;
+        border: 0;
+        height: 1.5px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+	
+	.rotate {
+		/* FF3.5+ */
+		-moz-transform: rotate(-90.0deg);
+		/* Opera 10.5 */
+		-o-transform: rotate(-90.0deg);
+		/* Saf3.1+, Chrome */
+		-webkit-transform: rotate(-90.0deg);
+		/* IE6,IE7 */
+		filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+		/* IE8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+		/* Standard */
+		transform: rotate(-90.0deg);
+	}
+	
+	c {
+	   white-space: nowrap;
+       writing-mode: tb-rl;
+       transform: rotate(-180.0deg);
+	}
+
+</style>
+
+<html>
+  <head>
+        <title>HILA</title>
+        <meta property="og:title" content="nlos" />
+  </head>
+
+  <body>
+    <br>
+    <center>
+    <span style="font-size:38px">HILA: Improving Semantic Segmentation in Transformers using Hierarchical Inter-Level Attention </span>
+    </center>
+
+    <br>
+      <table align=center width=700px>
+       <tr>
+
+        
+        <td align=center width=120px>
+        <center>
+        <span style="font-size:20px"><a href="http://www.cs.toronto.edu/~garyleung/">Gary Leung</a></span>
+        </center>
+        </td>
+
+        <td align=center width=120px>
+        <center>
+        <span style="font-size:20px"><a href="http://www.cs.toronto.edu/~jungao/">Jun Gao</a></span>
+        </center>
+        </td>
+
+        <td align=center width=120px>
+        <center>
+        <span style="font-size:20px"><a href="http://www.cs.toronto.edu/~xiaohui/">Xiaohui Zeng</a></span>
+        </center>
+        </td>
+
+        <td align=center width=120px>
+        <center>
+        <span style="font-size:20px"><a href="http://www.cs.utoronto.ca/~fidler/">Sanja Fidler</a></span>
+        </center>
+        </td>
+
+       </tr>
+      </table>
+    
+	<br>
+
+    <br>
+  <table align=center width=700px>
+       <tr>
+        <td align=center width=100px>
+        <center>
+    <span style="font-size:20px;color:red"></span>
+        </center>
+        </td>
+     </tr>
+    </table>
+	
+			<br>
+
+      <table align=center width=900px>
+                <tr>
+                    <td width=800px>
+                      <center>
+<!--                          <a href="resources/combined_hila_diagram.png"><img src = "resources/combined_hila_diagram.png" height="230px"></img></href></a><br>-->
+                          <a href="resources/finished_figure_aligned_v3.gif"><img src = "resources/finished_figure_aligned_v3.gif" height="450px"></img></href></a><br>
+                    </center>
+
+                </tr>
+          <tr>
+                    </td>
+                    <td width=800px>
+                      <center>
+                          <a href="resources/patch_diagram.png"><img src = "resources/patch_diagram.png" height="370px"></img></href></a><br>
+                    </center>
+                    </td>
+                </tr>
+
+
+            </table>
+            <table align=center width=900px></table>
+                <tr>
+                    <td width=600px>
+                    <br>  
+                    <center>
+                          <span style="font-size:14px"><i>We add hierarchical inter-level attention into pre-existing vision transformer architectures. Each higher-level
+feature corresponds to a local patch of lower-level features. In our Bottom-Up
+Update, our inter-level attention updates each higher-level feature using lower-level features
+in its local patch area P. In our Top-Down Update,
+our inter-level attention updates each lower-level feature using higher-level features whose
+patches they belong in.</i>
+                    </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width=600px>
+                        <br>
+                        <p align="justify" style="font-size: 18px">
+                            Existing transformer-based image backbones typically propagate feature information in one direction from lower to higher-levels.
+This may not be ideal since the localization ability to delineate accurate object boundaries, is most prominent in the lower, high-resolution
+feature maps, while the semantics that can disambiguate image signals
+belonging to one object vs. another, typically emerges in a higher level
+of processing. We present Hierarchical Inter-Level Attention (HILA), an
+attention-based method that captures Bottom-Up and Top-Down Updates between features of different levels. HILA extends hierarchical vision transformer architectures by adding local connections between features of higher and lower levels to the backbone encoder. In each iteration, we construct a hierarchy by having higher-level features compete
+for assignments to update lower-level features belonging to them, iteratively resolving object-part relationships. These improved lower-level
+features are then used to re-update the higher-level features. HILA can
+be integrated into the majority of hierarchical architectures without requiring any changes to the base model. We add HILA into SegFormer
+and the Swin Transformer and show notable improvements in accuracy
+in semantic segmentation with fewer parameters and FLOPS.</p>
+                    </td>
+                </tr>
+            </table>
+  <br>
+    <br>
+
+            <hr>
+			<br>
+           
+            <table align=center width=700>
+             <center><h1>Paper</h1></center>
+                <tr>
+                  <td><a href="./files/main.pdf"><img style="height:180px; border: solid; border-radius:30px;" src="./resources/paper.png"/></a></td>
+                  <td><span style="font-size:18px">Gary Leung, Jun Gao, Xiaohui Zeng, Sanja Fidler<br><br>
+                     Improving Semantic Segmentation in Transformers using Hierarchical Inter-Level Attention <br>
+                    </td>
+              </tr>
+            </table>
+            <br>
+
+            <table align=center width=700px>
+              <tr>
+					<td>  
+                    <span style="font-size:18px"><center>
+                      <a href="https://arxiv.org/abs/tbd">[Download Paper]</a>
+                    </center></td>
+
+                  <td><span style="font-size:18px"><center>
+                      <a href="./files/bib.tex">[Bibtex]</a>
+                    </center></td>
+                  <td><span style="font-size:18px"><center>
+                      <a href="https://github.com/fidler-lab/hila">[Code Released!]</a>
+                    </center></td>
+              </tr>
+			</table>
+            
+			<br>
+			<table align=center width=700px>
+			  <tr>
+                  <td colspan="5" style="font-size: 16px">
+                  <center>
+                      <i> Please address correspondence regarding this paper to <a href="mailto:ytgary.leung@mail.utoronto.ca">Gary Leung</a> and <a href="mailto:fidler@cs.toronto.edu">Sanja Fidler</a>.</i>
+                  </center>
+                  </td>
+              </tr>
+			</table>
+		
+		  <br>
+      <br>
+      <hr>
+      <br>
+
+<!--      <center><h1>Videos</h1></center>-->
+
+<!--      <table align=center width=900px>-->
+<!--                <tr>-->
+<!--                    -->
+<!--                    <td width=400>-->
+<!--                        <center>-->
+<!--                            <iframe width="400" height="250" src="https://www.youtube.com/embed/U1aZoaQzrfM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>                        -->
+<!--                        </center>-->
+<!--                    </td>-->
+<!--                    <td width=400>-->
+<!--                        <center>-->
+<!--                            <iframe width="400" height="250" src="https://www.youtube.com/embed/_DVxqK3_zlM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>                        -->
+<!--                        </center>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--            </table>-->
+
+<!--      <br>-->
+<!--      <hr>-->
+<!--      <br>-->
+
+<center><h1>Experiments</h1></center>
+    
+
+      <table align=center width=900px>
+       
+       <tr>
+      
+      <td>
+            <p  align="justify" >
+        
+                    <span style="font-size:18px">
+          <hr style="height:12pt; visibility:hidden;" /> <!–– Spacing -->
+                    <b>Improvements in Semantic Segmentation by Adding HILA to Segformer</b>
+
+      </p>          
+      </td>
+      
+      </tr>
+      
+       </table>
+        <br>
+        <tr>
+
+        <td colspan='2'>
+                    <center>
+                        <a href="resources/performance_graph.png"><img src = "resources/performance_graph.png" height="300px"></img></a><br>
+                    </center>
+                </td>
+
+
+      </tr>
+           <br>
+
+        <br>
+        <tr>
+
+        <td colspan='2'>
+                    <center>
+                        <a href="resources/segmentation_examples.png"><img src = "resources/segmentation_examples.png" height="400px"></img></a><br>
+                    </center>
+                </td>
+
+
+      </tr>
+        <br>
+    <br>
+        <tr>
+
+        <td colspan='2'>
+                    <center>
+                        <a href="resources/fscore_by_cate.png"><img src = "resources/fscore_by_cate.png" height="300px"></img></a><br>
+                    </center>
+                </td>
+
+
+      </tr>
+        <br>
+      
+		  <table align=center width=900px>
+       
+       <tr>
+      
+      <td>
+            <p  align="justify" >
+        
+                    <span style="font-size:18px">
+          <hr style="height:12pt; visibility:hidden;" /> <!–– Spacing -->
+                    <b>Hierarchical Inter-Level Attention Visualizations</b>
+
+      </p>          
+      </td>
+      
+      </tr>
+      
+       </table>
+
+      <br>
+        <tr>
+        
+        <td colspan='2'>
+                    <center>
+                        <a href="resources/cityscapes_attention.png"><img src = "resources/cityscapes_attention.png" height="380px"></img></a><br>
+                    </center>
+                </td>
+        
+        
+      </tr>
+        <br>
+
+		  
+
+
+      <table align=center width=900px>
+        <tr>
+                  <td colspan="5" style="font-size: 14px">
+                  <center>
+                      We thank <a href="http://www.cs.toronto.edu/~davidj/">David Acuna</a> for his website template.
+                  </center>
+                  </td>
+              </tr>
+      </table>
+</body>
+</html>
