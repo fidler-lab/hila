@@ -7,7 +7,7 @@ This is the official PyTorch implementation of HILA. For technical details, plea
 Improving Semantic Segmentation in Transformers using Hierarchical Inter-Level Attention.<br>
 [Gary Leung](https://www.cs.toronto.edu/~garyleung/), [Jun Gao](http://www.cs.toronto.edu/~jungao/), [Xiaohui Zeng](https://www.cs.utoronto.ca/~xiaohui/), and [Sanja Fidler](http://www.cs.toronto.edu/~fidler/).<br>
 
-###### University of Toronto  [Project page](https://www.cs.toronto.edu/~garyleung/hila) | [Paper (ArXiv soon)]() 
+###### University of Toronto  [Project page](https://www.cs.toronto.edu/~garyleung/hila) | [Paper](https://arxiv.org/abs/2207.02126) 
 
 <div align="center">
   <img src="/docs/resources/performance_graph.png" width="100%"/>
@@ -135,7 +135,7 @@ python ./tools/visualize_attention.py local_configs/hila/segformer/B1/hila.b1.10
 @article{leung2022hila,
   title={HILA: Improving Semantic Segmentation in Transformers using Hierarchical Inter-Level Attention},
   author={Leung, Gary and Gao, Jun and Zeng, Xiaohui and Fidler, Sanja},
-  journal={},
+  journal={arXiv:2207.02126},
   year={2022}
 }
 ```
