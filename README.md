@@ -92,7 +92,9 @@ python ./tools/test.py local_configs/hila/segformer/B1/hila.b1.1024x1024.city.16
 python ./tools/test.py local_configs/hila/segformer/B1/hila.b1.1024x1024.city.160k_S234.py  /path/to/checkpoint_file --eval-f1-start 0
 
 # F-score testing (in batches due to memory issues)
+# Note: mIOU code not integrated into batching, please run mIOU evaluation separately
 python ./tools/test.py local_configs/hila/segformer/B1/hila.b1.1024x1024.city.160k_S234.py  /path/to/checkpoint_file --eval-f1-start 0 --eval-f1-step-size 100
+python ./tools/test.py local_configs/hila/segformer/B1/hila.b1.1024x1024.city.160k_S234.py  /path/to/checkpoint_file --eval-f1-start 100 --eval-f1-step-size 100
 ...
 python ./tools/test.py local_configs/hila/segformer/B1/hila.b1.1024x1024.city.160k_S234.py  /path/to/checkpoint_file --eval-f1-start 400 --eval-f1-step-size 100
 
